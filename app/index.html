@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-strict-di class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- build:css(.tmp) css/main.min.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+
+    <title>Lisa</title>
+  </head>
+  <body ng-controller="MainController as common">
+    <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span>
+
+    <transclude-template src="layout.tmpl" >
+      <div ng-view onload="main.onLoad()"></div>
+    </transclude-template>
+
+    <!-- build:js(.) scripts/vendor.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/spin.js/spin.js"></script>
+    <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+    <script src="bower_components/tv4/tv4.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/scripts,app}) scripts/scripts.min.js -->
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/configs/route.config.js"></script>
+    <script src="scripts/configs/cache.interceptor.js"></script>
+    <script src="scripts/configs/auth.interceptor.js"></script>
+    <script src="scripts/configs/http.config.js"></script>
+    <script src="scripts/configs/errors.config.js"></script>
+    <script src="scripts/configs/location.provider.js"></script>
+
+
+    <script src="scripts/controllers/repos.js"></script>
+    <script src="scripts/controllers/alert.js"></script>
+    <script src="scripts/controllers/header.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <script src="scripts/controllers/error.js"></script>
+
+    <script src="scripts/directives/active.tab.js"></script>
+    <script src="scripts/directives/json-schema-validator.directive.js"></script>
+    <script src="scripts/directives/transclude.template.js"></script>
+    <script src="scripts/directives/form.template.js"></script>
+
+    <script src="scripts/services/modal.js"></script>
+    <script src="scripts/services/repos.js"></script>
+    <script src="scripts/services/service-bus.js"></script>
+    <script src="scripts/services/shareData.js"></script>
+    <script src="scripts/services/json-schema-validation.service.js"></script>
+
+    <script src="scripts/models/resource.js"></script>
+
+    <!-- generated scripts-->
+    <script src="scripts/generated/constants.js"></script>
+    <script src="scripts/generated/tmpls.js"></script>
+
+    <!-- shared modules-->
+    <script src="scripts/modules/ng.spinner.js"></script>
+    <script src="scripts/modules/ng.static.routes.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<br/>
+<br/>
+<div class="container-fluid">
+  <div class="jumbotron" ng-controller="ErrorController as err">
+    <h1>{{err.errorCode}}</h1>
+    <p ng-bind="err.message"></p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="javascript:void(0)" ng-click="err.goBack()" role="button"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;go back</a>
+    </p>
+  </div>
+</div>

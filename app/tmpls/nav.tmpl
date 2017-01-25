@@ -1,0 +1,18 @@
+<div role="navigation" ng-controller="NavController as nav">
+
+  <!-- menu  -->
+  <div ng-repeat="i in nav.menuItems" class="pnav-section" ng-class="{'pnav-section--basic': i.isBasic}">
+    <!-- header-->
+    <h4 ng-bind="i.header"></h4>
+
+    <!-- simple item -->
+    <div class="list-group">
+      <!-- is link-->
+      <a ng-repeat="link in i.items" class="list-group-item" ng-href="#{{link.uri}}" route-data route-data-uri="link.uri" route-data-active="link.isActive" ng-class="{'active' : link.isActive }">
+        {{link.title}}
+      </a>
+    </div>
+
+  </div>
+
+</div>

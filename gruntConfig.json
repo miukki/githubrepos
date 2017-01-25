@@ -1,0 +1,13 @@
+{
+  "app" :  {
+    "src": "app",
+    "generated": "app/scripts/generated",
+    "dist": "dist",
+    "tmp": ".tmp"
+
+  },
+  "ext": "{htm,tmpl}",
+  "dest": {
+    "dev": ".tmp"
+  }
+}

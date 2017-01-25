@@ -1,0 +1,12 @@
+table {
+  th.sortable {
+    cursor: pointer;
+
+    .glyphicon { display: none; }
+
+    &.st-sort-ascent > .glyphicon-chevron-up,
+    &.st-sort-descent > .glyphicon-chevron-down{
+      display: inline;
+    }
+  }
+}

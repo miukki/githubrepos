@@ -1,0 +1,20 @@
+<div class="container text-left">
+
+  <div class="header text-center" ng-controller="HeaderController as header" ng-if="!common.isMode('error')">
+    <h1>{{header.title}}</h1>
+    <p class="lead" ng-bind="header.description"></p>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3" ng-if="!common.isMode('error')">
+        <div ng-include="'nav.tmpl'"></div>
+      </div>
+      <div class="col-md-8" ng-class="{'col-md-offset-2': common.isMode('error'), 'col-md-offset-1 text-center': common.isMode('error')}">
+        <!-- Main view or Error View-->
+        <ng-transclude></ng-transclude>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-inline">
+      <div class="form-group" ng-class="{'has-error': form.name.$invalid }">
+        <div class="input-group">
+          <div class="input-group-addon">Name:</div>
+          <input ng-change="main.triggerChanges(form);" type="name" name="name" class="form-control" ng-model="main._data.name" placeholder="input name">
+        </div>
+        <p class="help-block" ng-show="form.name.$invalid">error!</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <button style="margin-left:-10px;" class="btn btn-primary " type="submit" ng-disabled="main.isUpdating" ng-click="main.save(form)">submit</button>
+    </div>
+  </div>
+</div>

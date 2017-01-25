@@ -1,0 +1,22 @@
+<br/>
+<br/>
+<p ng-if="!main.repos.length && main._data.name">
+  Github user has no repos.
+</p>
+
+<table ng-if="main.repos.length" class="table" st-table="displayedRepos" st-safe-src="main.repos">
+  <thead>
+    <tr>
+      <th class="sortable" st-sort="name">name <i class="glyphicon glyphicon-chevron-up"></i><i class="glyphicon glyphicon-chevron-down"></i></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="r in displayedRepos">
+      <td>
+        <a ng-href="//github.com/{{r.full_name}}">{{r.name}}</a>
+      </td>
+    </tr>
+  </tbody>
+
+</table>

@@ -1,0 +1,19 @@
+<div ng-if="alert.title" class="modal-header text-left">
+  <div type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="alert.cancel()"><i class="glyphicon glyphicon-remove"></i></div>
+  <h3>{{alert.title}}</h3>
+</div>
+<div class="modal-body">
+  <h3 class="modal-header-text">
+    <span class="fa fa-check text-success"></span>
+    {{alert.message}}
+  </h3>
+</div>
+<div class="modal-footer text-right">
+  <div class="row">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-8 text-right">
+      <div type="button" class="btn btn-primary" ng-click="alert.cancel()">{{alert.action}}</div>
+    </div>
+  </div>
+</div>
