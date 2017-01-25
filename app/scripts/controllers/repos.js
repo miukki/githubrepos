@@ -11,7 +11,7 @@ function ReposController(serviceBus) {
 	angular.extend(this, {
 		_data: {},
 		serviceBus:serviceBus,
-		repos: []
+		repos: null
 	});
 
 	serviceBus.reposService.getSchema().then(function(resp) {
@@ -41,9 +41,11 @@ ReposController.prototype.save = function (form ) {
 		//post data
 		var method = this.serviceBus.reposService.get(this._data.name)
 			.then(function (resp) {
-   			angular.extend(this.repos, resp);
-			}.bind(this))
+        this.repos = [].concat(resp);
+ 			}.bind(this))
 			.catch(function (resp) {
+
+        this.repos = null;
 
 				if (resp.status === 404){
 					this.serviceBus.ui.alert('', 'User ' + resp.statusText, 'ok');

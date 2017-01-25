@@ -17,3 +17,8 @@
     </div>
   </div>
 </div>
+<br/>
+
+<p ng-show="main.repos && !main.repos.length && !form.name.$invalid">
+  Github user has no repos.
+</p>

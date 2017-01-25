@@ -2,8 +2,7 @@ describe('Service: reposService', function() {
   'use strict';
 
   var reposService,
-  DATA = window.__fixtures__['test/fixtures/data'],
-  schema = window.__fixtures__['app/data/repos.schema'];
+  DATA = window.__fixtures__['test/fixtures/data'];
 
   beforeEach(module('App'));
 

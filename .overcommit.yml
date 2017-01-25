@@ -31,3 +31,19 @@
 #
 #  IndexTags:
 #    enabled: true # Generate a tags file with `ctags` each time HEAD changes
+
+
+plugin_directory: 'overcommit_hooks'
+
+PreCommit:
+  GruntLint:
+    enabled: true
+    on_warn: fail # Treat all warnings as failures
+
+  GruntUnitTests:
+    enabled: true
+    on_warn: fail # Treat all warnings as failures
+
+  GruntE2e:
+    enabled: false
+    on_warn: fail # Treat all warnings as failures    

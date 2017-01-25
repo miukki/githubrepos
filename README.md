@@ -45,3 +45,6 @@ overcommit --install
 overcommit --sign
 overcommit --sign pre-commit
 ```
+
+### Dist Bundle:
+The example doesn't provide dist bundle
